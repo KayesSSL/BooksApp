@@ -1,0 +1,69 @@
+# Xcode
+DerivedData/
+*.xcworkspace/
+!default.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Swift Data
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Cocoapods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# Build artifacts
+*.ipa
+*.app
+*.dSYM.zip
+*.dSYM
+
+# macOS
+.DS_Store
+
+# Archives
+*.xcarchive
+
+# Temporary files
+*.tmp
+*.swp
+*.lock
+
+# Xcode plist files
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# IDE related files
+.idea/
+.vscode/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Coverage files
+*.xccovreport
+*.xccovarchive
+
+# Other metadata
+*.moved-aside
+*.hmap
+*.ipa
+*.rlt
+*.plist
