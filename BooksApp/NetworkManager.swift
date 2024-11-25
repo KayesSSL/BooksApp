@@ -23,7 +23,15 @@ class NetworkManager {
         }
         
         let (data, _) = try await URLSession.shared.data(from: url)
-        let books = try JSONDecoder().decode([Book].self, from: data)
-        return books
+        do {
+            let books = try JSONDecoder().decode([Book].self, from: data)
+            for book in books {
+                print(book) // This will use the custom description
+            }
+            return books
+        } catch {
+            print("Failed to decode JSON: \(error)")
+        }
+        return []
     }
 }

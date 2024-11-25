@@ -10,7 +10,7 @@ import SwiftData
 
 // MARK: - Models
 @Model
-final class Book: Codable {
+final class Book: Codable, CustomStringConvertible {
     enum CodingKeys: String, CodingKey {
         case id, title, author
         case year = "publication_year"
@@ -20,6 +20,10 @@ final class Book: Codable {
     var title: String
     var author: String
     var year: Int?
+    
+    var description: String {
+        return "Title: \(title), Author: \(author), Year: \(year ?? 1971)"
+    }
     
     init(id: Int, title: String, author: String, year: Int) {
         self.id = id
